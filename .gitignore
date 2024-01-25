@@ -44,3 +44,13 @@ app.*.map.json
 
 # fvm
 .fvm/flutter_sdk
+
+# firebase
+google-services.json
+GoogleService-Info.plist
+.firebase/
+firebase_options.dart
+firebase_app_id_file.json
+
+# Flutter-specific
+pubspec.lock
