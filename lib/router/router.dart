@@ -19,7 +19,7 @@ final router = GoRouter(
     GoRoute(
       name: 'auth',
       path: '/',
-      builder: (context, state) => const AuthPage(),
+      builder: (context, state) => AuthPage(),
     ),
     ShellRoute(
       navigatorKey: _shellNavigatorKey,
