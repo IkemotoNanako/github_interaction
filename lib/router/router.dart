@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:github_interaction/ui/auth/auth_page.dart';
 import 'package:github_interaction/ui/common/base_page.dart';
 import 'package:github_interaction/ui/home/home_page.dart';
-import 'package:github_interaction/ui/qr/qr_page.dart';
+import 'package:github_interaction/ui/my/my_page.dart';
 import 'package:github_interaction/ui/search/detaild_page.dart';
 import 'package:github_interaction/ui/search/search_page.dart';
 import 'package:go_router/go_router.dart';
@@ -19,7 +19,7 @@ final router = GoRouter(
     GoRoute(
       name: 'auth',
       path: '/',
-      builder: (context, state) => const AuthPage(),
+      builder: (context, state) => AuthPage(),
     ),
     ShellRoute(
       navigatorKey: _shellNavigatorKey,
@@ -32,8 +32,8 @@ final router = GoRouter(
           builder: (context, state) => const HomePage(),
         ),
         GoRoute(
-          path: '/qr',
-          builder: (context, state) => const QrPage(),
+          path: '/my',
+          builder: (context, state) => const MyPage(),
         ),
         GoRoute(
           path: '/search',

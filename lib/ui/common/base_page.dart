@@ -19,7 +19,7 @@ class _BasePageState extends State<BasePage> {
         selectedIndex: _selectedIndex,
         destinations: const <Widget>[
           NavigationDestination(icon: Icon(Icons.home), label: 'HOME'),
-          NavigationDestination(icon: Icon(Icons.qr_code), label: 'QR'),
+          NavigationDestination(icon: Icon(Icons.person), label: 'MyPage'),
           NavigationDestination(icon: Icon(Icons.search), label: 'SEARCH'),
         ],
         onDestinationSelected: (index) {
@@ -30,7 +30,7 @@ class _BasePageState extends State<BasePage> {
               break;
             case 1:
               _selectedIndex = 1;
-              context.push('/qr');
+              context.push('/my');
               break;
             case 2:
               _selectedIndex = 2;

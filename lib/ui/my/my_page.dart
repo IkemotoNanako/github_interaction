@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class QrPage extends StatelessWidget {
-  const QrPage({super.key});
+class MyPage extends StatelessWidget {
+  const MyPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Qr Page'),
+        child: Text('My Page'),
       ),
     );
   }
