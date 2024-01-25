@@ -1,24 +1,18 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:github_interaction/core/account.dart';
 import 'package:github_interaction/model/search/search_state.dart';
+import 'package:github_interaction/repository/search/search_repository_impl.dart';
 
 final searchNotifierProvider =
     StateNotifierProvider<SearchNotifier, SearchState>(
-  (ref) => SearchNotifier(),
+  (ref) => SearchNotifier(ref),
 );
 
 class SearchNotifier extends StateNotifier<SearchState> {
-  SearchNotifier() : super(const SearchState());
+  SearchNotifier(this.ref) : super(const SearchState());
+  Ref ref;
 
   void searchAccount(String query) async {
-    // 実際はここでAPIを叩くReposittoryを呼び出す
-    final accounts = [
-      const Account(
-        name: 'name',
-        iconUrl: 'https://avatars.githubusercontent.com/u/1?v=4',
-        id: 'id',
-      )
-    ];
+    final accounts = await ref.read(SearchRepositoryProvider).fetch();
     state = state.copyWith(accounts: accounts);
   }
 }

@@ -8,7 +8,6 @@ class SearchPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final controller = TextEditingController();
     final state = ref.watch(searchNotifierProvider);
     final notifier = ref.watch(searchNotifierProvider.notifier);
     final accounts = state.accounts;
