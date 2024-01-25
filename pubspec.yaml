@@ -43,6 +43,7 @@ dependencies:
   freezed: ^2.4.6
   build_runner: ^2.4.8
   flutter_riverpod: ^2.4.9
+  http: ^1.2.0
 
 dev_dependencies:
   flutter_test:

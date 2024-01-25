@@ -33,22 +33,25 @@ class SearchPage extends ConsumerWidget {
               ? const Center(
                   child: Text('no result'),
                 )
-              : ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: accounts.length,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: CircleAvatar(
-                        backgroundImage: NetworkImage(accounts[index].iconUrl),
-                      ),
-                      title: Text(accounts[index].name),
-                      subtitle: Text(accounts[index].id),
-                      onTap: () {
-                        print(accounts[index].id);
-                        context.go('/search/details');
-                      },
-                    );
-                  },
+              : Expanded(
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: accounts.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage:
+                              NetworkImage(accounts[index].iconUrl),
+                        ),
+                        title: Text(accounts[index].name),
+                        subtitle: Text(accounts[index].id),
+                        onTap: () {
+                          print(accounts[index].id);
+                          context.go('/search/details');
+                        },
+                      );
+                    },
+                  ),
                 )
         ],
       )),
