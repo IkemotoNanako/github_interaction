@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:github_interaction/core/account.dart';
 import 'package:go_router/go_router.dart';
-
-class AccountInfo {
-  final String name;
-  final String id;
-  final String iconUrl;
-
-  const AccountInfo({
-    required this.name,
-    required this.id,
-    required this.iconUrl,
-  });
-}
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -19,8 +8,8 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = TextEditingController();
-    final List<AccountInfo> accountInfo = [
-      AccountInfo(
+    final List<Account> accountInfo = [
+      Account(
         name: 'Flutter',
         id: 'flutter',
         iconUrl: 'https://avatars.githubusercontent.com/u/14101776?v=4',
