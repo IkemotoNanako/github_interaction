@@ -23,7 +23,7 @@ class SearchRepositoryImpl implements SearchRepository {
       if (responses.statusCode != 200) {
         throw Exception('Failed to fetch accounts');
       } else {
-        final body = jsonDecode(responses.body);
+        final Map<String, dynamic> body = jsonDecode(responses.body);
         final List<dynamic> items = body['items'];
         final List<Account> accounts =
             items.map((dynamic item) => Account.fromJson(item)).toList();
