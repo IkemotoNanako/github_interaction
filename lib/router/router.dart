@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:github_interaction/ui/auth/auth_page.dart';
-import 'package:github_interaction/ui/common/base_page.dart';
-import 'package:github_interaction/ui/home/home_page.dart';
-import 'package:github_interaction/ui/my/my_page.dart';
-import 'package:github_interaction/ui/search/detaild_page.dart';
-import 'package:github_interaction/ui/search/search_page.dart';
+import 'package:github_interaction/ui/auth/view/auth_page.dart';
+import 'package:github_interaction/ui/common/view/base_page.dart';
+import 'package:github_interaction/ui/home/view/home_page.dart';
+import 'package:github_interaction/ui/my/view/my_page.dart';
+import 'package:github_interaction/ui/search/view/detaild_page.dart';
+import 'package:github_interaction/ui/search/view/search_page.dart';
 import 'package:go_router/go_router.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
@@ -19,7 +19,7 @@ final router = GoRouter(
     GoRoute(
       name: 'auth',
       path: '/',
-      builder: (context, state) => AuthPage(),
+      builder: (context, state) => const AuthPage(),
     ),
     ShellRoute(
       navigatorKey: _shellNavigatorKey,
