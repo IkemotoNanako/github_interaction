@@ -12,7 +12,7 @@ class SearchNotifier extends StateNotifier<SearchState> {
   Ref ref;
 
   void searchAccount(String query) async {
-    final accounts = await ref.read(SearchRepositoryProvider).fetch(query);
+    final accounts = await ref.read(searchRepositoryProvider).fetch(query);
     state = state.copyWith(accounts: accounts);
   }
 }
